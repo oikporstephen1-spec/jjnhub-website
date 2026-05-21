@@ -1,1 +1,1 @@
-console.log('JJN Hub website loaded');
+console.log('JJN Hub Website Loaded');
