@@ -172,8 +172,7 @@ footer{
     display:none;
   }
 }
-.logo-img{
-  width: 160px;
-  hieght: auto;
-  opacity:0.75;
+.logo img {
+  width: 120px;   /* try 100px–200px depending on your design */
+  height: auto;   /* keeps proportions correct */
 }
