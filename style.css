@@ -172,3 +172,8 @@ footer{
     display:none;
   }
 }
+.logo-img{
+  width: 160px;
+  hieght: auto;
+  opacity:0.75;
+}
