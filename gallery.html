@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width,initial-scale=1">
+
+<title>
+
+Vehicle Gallery
+
+</title>
+
+<link
+rel="stylesheet"
+
+href="css/style.css">
+
+</head>
+<div
+
+id="imagePopup"
+
+class="image-popup"
+
+onclick="closeImage()">
+
+<img
+
+id="popupImg"
+
+class="popup-large">
+
+</div>
+<body class="gallery-page">
+
+
+<header class="navbar">
+
+<div class="logo">
+
+<a href="index.html">
+
+<img
+src="assets/logo.png"
+
+class="logo-img">
+
+</a>
+
+</div>
+
+<nav>
+
+
+<a href='index.html'>Home</a>
+
+<a href='about.html'>About</a>
+
+<a href='automotive.html'>Automotive</a>
+
+<a href='engineering.html'>Engineering</a>
+
+<a href='logistics.html'>Logistics</a>
+
+<a href='marine-services.html'>Marine</a>
+
+<a href='procurement.html'>Procurement</a>
+
+<a href='contact.html'>Contact</a>
+
+</nav>
+
+</header>
+
+
+
+<section class="hero">
+
+<div class="hero-overlay">
+
+<h1>
+
+AVAILABLE VEHICLES
+
+</h1>
+<p class="gallery-intro">
+
+Explore quality vehicles available through JJN HUB.
+
+Our gallery features carefully selected cars,
+SUVs
+and premium vehicle options sourced to meet different customer preferences,
+budgets
+and operational needs.
+
+From luxury vehicles
+to dependable everyday transportation,
+JJN HUB supports customers with vehicle sourcing,
+dealership assistance,
+importation guidance
+and professional customer support designed for reliability and satisfaction.
+
+Browse available inventory,
+view specifications
+and submit enquiries directly through our vehicle order system.
+
+</p>
+    
+<p>
+
+Browse vehicles currently available.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<section class="gallery-grid">
+
+
+
+<div class="car-card">
+
+
+<img
+
+src="assets/car1.jpg"
+
+alt="Vehicle"
+
+onclick="window.open(this.src)"
+
+class="vehicle-img">  
+<h3>
+
+2020 Lexus RX350
+
+</h3>
+
+<p class="price">
+
+₦42,000,000
+
+</p>
+
+<button
+
+class="gold-btn"
+
+onclick="openOrderForm(
+
+'2020 Lexus RX350'
+
+)">
+
+BUY NOW
+
+</button>
+
+</div>
+
+
+
+
+<div class="car-card">
+
+<img
+
+src="assets/car2.jpg"
+
+alt="Vehicle"
+
+onclick="window.open(this.src)"
+
+class="vehicle-img">
+<h3>
+
+2019 Toyota Prado
+
+</h3>
+
+<p class="price">
+
+₦58,000,000
+
+</p>
+
+<button
+
+class="gold-btn"
+
+onclick="openOrderForm(
+
+'2019 Toyota Prado'
+
+)">
+
+BUY NOW
+
+</button>
+
+</div>
+
+
+
+
+<div class="car-card">
+
+<img
+
+src="assets/car1.jpg"
+
+alt="Vehicle"
+
+onclick="window.open(this.src)"
+
+class="vehicle-img">
+<h3>
+
+2021 Mercedes GLE
+
+</h3>
+
+<p class="price">
+
+₦73,000,000
+
+</p>
+
+<button
+
+class="gold-btn"
+
+onclick="openOrderForm(
+
+'2021 Mercedes GLE'
+
+)">
+
+BUY NOW
+
+</button>
+
+</div>
+
+
+</section>
+
+
+
+<div
+
+id="orderPopup"
+
+class="popup">
+
+<div
+
+class="popup-content">
+
+<span
+
+onclick="closeOrderForm()"
+
+class="close">
+
+×
+
+</span>
+
+<h2>
+
+Vehicle Enquiry
+
+</h2>
+
+
+<form
+
+action="https://formsubmit.co/info@jjnhub.com"
+
+method="POST">
+
+<input
+
+name="Vehicle"
+
+id="selectedVehicle"
+
+readonly>
+
+
+<input
+
+name="Name"
+
+placeholder="Full Name"
+
+required>
+
+
+<input
+
+name="Phone"
+
+placeholder="Phone Number">
+
+<input
+
+name="Email"
+
+placeholder="Email">
+
+<textarea
+
+name="Message"
+
+placeholder="Additional Request">
+
+</textarea>
+
+
+<button
+
+type="submit"
+
+class="gold-btn">
+
+Submit
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+
+<script>
+
+function openOrderForm(
+
+vehicle
+
+){
+
+document
+
+.getElementById(
+
+"selectedVehicle"
+
+)
+
+.value=vehicle;
+
+
+document
+
+.getElementById(
+
+"orderPopup"
+
+)
+
+.style.display="block";
+
+}
+
+
+
+function closeOrderForm(){
+
+document
+
+.getElementById(
+
+"orderPopup"
+
+)
+
+.style.display="none";
+
+}
+
+</script>
+<div
+
+id="imagePopup"
+
+class="image-popup"
+
+onclick="closeImage()">
+
+<img
+
+id="popupImage"
+
+class="popup-large">
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width,initial-scale=1">
+
+<title>
+
+Procurement | JJN HUB
+
+</title>
+
+<link
+rel="stylesheet"
+href="css/style.css">
+
+</head>
+
+<body class="procurement-page">
+
+
+<header class="navbar">
+
+<div class="logo">
+
+<a href="index.html">
+
+<img
+src="assets/logo.png"
+alt="JJN HUB"
+class="logo-img">
+
+</a>
+
+</div>
+
+
+<nav>
+
+<a href='index.html'>Home</a>
+
+<a href='about.html'>About</a>
+
+<a href='automotive.html'>Automotive</a>
+
+<a href='engineering.html'>Engineering</a>
+
+<a href='logistics.html'>Logistics</a>
+
+<a href='marine-services.html'>Marine</a>
+
+<a href='procurement.html'>Procurement</a>
+
+<a href="gallery.html">Gallery</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</header>
+
+
+
+<section class="hero">
+
+<div class="hero-overlay">
+
+<h1>
+
+PROCUREMENT SOLUTIONS
+
+</h1>
+
+<p class="hero-services">
+
+INDUSTRIAL SOURCING • SUPPLY SUPPORT • PROCUREMENT SERVICES
+
+</p>
+
+
+<p class="hero-text">
+
+JJN HUB provides procurement support
+for industrial,
+commercial
+and operational requirements.
+
+We assist businesses and clients
+with sourcing coordination,
+supply support,
+vendor assistance
+and procurement guidance designed
+for reliability,
+efficiency
+and professional execution.
+
+</p>
+
+<div class="auto-buttons">
+
+<a
+href="#services"
+class="gold-btn">
+
+Our Services
+
+</a>
+
+
+<button
+class="gold-btn"
+
+onclick="openProcurementForm()">
+
+Request Procurement
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section
+class="cards"
+id="services">
+
+
+<div class="card">
+
+<h2>
+
+Industrial Sourcing
+
+</h2>
+
+<p>
+
+Support for sourcing industrial equipment,
+technical materials,
+engineering components
+and operational supplies.
+
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>
+
+Vendor Coordination
+
+</h2>
+
+<p>
+
+Procurement assistance,
+supplier coordination
+and sourcing support
+designed to simplify purchasing operations.
+
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>
+
+Supply Support
+
+</h2>
+
+<p>
+
+Reliable procurement support
+for businesses,
+projects
+and operational requirements.
+
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>
+
+Logistics Coordination
+
+</h2>
+
+<p>
+
+Coordination support
+for supply movement,
+delivery planning
+and procurement logistics.
+
+</p>
+
+</div>
+
+
+</section>
+
+
+
+<div
+
+id="procurementPopup"
+
+class="popup">
+
+<div class="popup-content">
+
+<span
+
+class="close"
+
+onclick="closeProcurementForm()">
+
+×
+
+</span>
+
+
+<h2>
+
+Procurement Request
+
+</h2>
+
+
+<form
+
+action="https://formsubmit.co/YOUR_EMAIL"
+
+method="POST">
+
+
+<input
+type="hidden"
+
+name="_subject"
+
+value="JJN HUB Procurement Request">
+
+
+<input
+type="hidden"
+
+name="_captcha"
+
+value="false">
+
+
+
+<input
+
+type="text"
+
+name="Full Name"
+
+placeholder="Full Name"
+
+required>
+
+
+
+<input
+
+type="email"
+
+name="Email"
+
+placeholder="Email Address"
+
+required>
+
+
+
+<input
+
+type="tel"
+
+name="Phone"
+
+placeholder="Phone Number">
+
+
+
+<input
+
+type="text"
+
+name="Product Needed"
+
+placeholder="Item / Product Needed">
+
+
+
+<input
+
+type="text"
+
+name="Quantity"
+
+placeholder="Quantity">
+
+
+
+<textarea
+
+name="Procurement Details"
+
+placeholder="Describe procurement requirement">
+
+</textarea>
+
+
+
+<button
+type="submit"
+class="gold-btn">
+
+Submit Request
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+
+
+<footer>
+
+© JJN HUB 2026
+
+</footer>
+
+
+
+<script>
+
+function openProcurementForm(){
+
+document
+.getElementById(
+"procurementPopup"
+)
+
+.style.display="block";
+
+}
+
+
+function closeProcurementForm(){
+
+document
+.getElementById(
+"procurementPopup"
+)
+
+.style.display="none";
+
+}
+
+</script>
+
+
+</body>
+
+</html>
