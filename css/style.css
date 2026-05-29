@@ -355,19 +355,21 @@ url("../assets/about-bg.jpg");
 }
 
 
-.automotive .hero{
+.automotive .hero,
+.gallery-page .hero,
+.cost-page .hero,
+.car-search-page .hero,
+.auto-help-page .hero{
 
 background-image:
-
 linear-gradient(
-
-rgba(0,0,0,.72),
-
-rgba(0,0,0,.72)
-
+rgba(0,0,0,.75),
+rgba(0,0,0,.75)
 ),
-
 url("../assets/automotive-bg.jpg");
+
+background-size:cover;
+background-position:center;
 
 }
 
