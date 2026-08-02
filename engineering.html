@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Engineering Division | JJN HUB</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="engineering theme-engineering">
+  <!-- Interactive Star-Particle Background Canvas -->
+  <canvas id="bg-canvas" class="bg-canvas"></canvas>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/logo.png" alt="JJN HUB Logo" class="logo-img">
+      </a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()" type="button">☰</button>
+    <nav id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="automotive.html">Automotive</a>
+      <a href="engineering.html">Engineering</a>
+      <a href="logistics.html">Logistics</a>
+      <a href="marine-services.html">Marine</a>
+      <a href="procurement.html">Procurement</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <p class="hero-services">INDUSTRIAL • ELECTRICAL • METERS • MOTOR CONTROL • CALIBRATION</p>
+      <h1>ENGINEERING SOLUTIONS</h1>
+      <p class="hero-text">
+        High-end technical capabilities. Tap any card below to flip it and explore our operational details.
+      </p>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section reveal-on-scroll">
+    <div class="stat-box">
+      <h2>120+</h2>
+      <p>Plants Calibrated</p>
+    </div>
+    <div class="stat-box">
+      <h2>24/7</h2>
+      <p>Emergency SLA</p>
+    </div>
+    <div class="stat-box">
+      <h2>ClassA</h2>
+      <p>Certifications</p>
+    </div>
+    <div class="stat-box">
+      <h2>Zero</h2>
+      <p>Safety Incidents</p>
+    </div>
+  </section>
+
+  <!-- Reorganized Engineering 3D Flip Card Grid -->
+  <section class="engineering-grid reveal-on-scroll">
+    
+    <!-- Card 1 -->
+    <div class="eng-card" onclick="toggleEngCard(this)">
+      <div class="eng-card-inner">
+        <div class="eng-card-front">
+          <img src="assets/engineering1.jpg" alt="Marine Electrical" class="eng-card-img">
+          <div class="eng-card-front-content">
+            <span class="eng-icon">⚡</span>
+            <h3>Marine Electrical</h3>
+            <p>Onboard power grids, line installations, and inspections.</p>
+            <span class="tap-hint">TAP TO FLIP</span>
+          </div>
+        </div>
+        <div class="eng-card-back">
+          <h4>Marine Electrical</h4>
+          <ul>
+            <li>Generator sync checking</li>
+            <li>Megger insulation tests</li>
+            <li>Load sharing calibrations</li>
+            <li>Emergency panel rewiring</li>
+          </ul>
+          <button class="gold-btn btn-sm" onclick="event.stopPropagation(); openOrderForm('Marine Electrical')">ENQUIRE</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="eng-card" onclick="toggleEngCard(this)">
+      <div class="eng-card-inner">
+        <div class="eng-card-front">
+          <img src="assets/engineering2.jpg" alt="Switchboard Maintenance" class="eng-card-img">
+          <div class="eng-card-front-content">
+            <span class="eng-icon">⚙️</span>
+            <h3>Switchboard Maintenance</h3>
+            <p>Diagnostics, test checks, and preventative breaker overhauls.</p>
+            <span class="tap-hint">TAP TO FLIP</span>
+          </div>
+        </div>
+        <div class="eng-card-back">
+          <h4>Switchboard Maintenance</h4>
+          <ul>
+            <li>Air circuit breaker testing</li>
+            <li>Busbar cleaning & tightening</li>
+            <li>Protection relay calibrations</li>
+            <li>Thermal hotspot audits</li>
+          </ul>
+          <button class="gold-btn btn-sm" onclick="event.stopPropagation(); openOrderForm('Switchboard Maintenance')">ENQUIRE</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="eng-card" onclick="toggleEngCard(this)">
+      <div class="eng-card-inner">
+        <div class="eng-card-front">
+          <img src="assets/engineering3.jpg" alt="Meter Calibration" class="eng-card-img">
+          <div class="eng-card-front-content">
+            <span class="eng-icon">📊</span>
+            <h3>Meter Calibration</h3>
+            <p>Instrument calibrations, safety checks, and certifications.</p>
+            <span class="tap-hint">TAP TO FLIP</span>
+          </div>
+        </div>
+        <div class="eng-card-back">
+          <h4>Meter Calibration</h4>
+          <ul>
+            <li>Pressure transmitter checks</li>
+            <li>Temperature sensor validations</li>
+            <li>Digital indicator calibrating</li>
+            <li>Safety limit testing</li>
+          </ul>
+          <button class="gold-btn btn-sm" onclick="event.stopPropagation(); openOrderForm('Meter Calibration')">ENQUIRE</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="eng-card" onclick="toggleEngCard(this)">
+      <div class="eng-card-inner">
+        <div class="eng-card-front">
+          <img src="assets/engineering4.jpg" alt="Motor Control Systems" class="eng-card-img">
+          <div class="eng-card-front-content">
+            <span class="eng-icon">🔌</span>
+            <h3>Motor Control Systems</h3>
+            <p>Variable Frequency Drives (VFD) and starter maintenance.</p>
+            <span class="tap-hint">TAP TO FLIP</span>
+          </div>
+        </div>
+        <div class="eng-card-back">
+          <h4>Motor Control</h4>
+          <ul>
+            <li>VFD parameter tuning</li>
+            <li>Soft starter logic checks</li>
+            <li>Contactor wear inspections</li>
+            <li>Control loop calibration</li>
+          </ul>
+          <button class="gold-btn btn-sm" onclick="event.stopPropagation(); openOrderForm('Motor Control Systems')">ENQUIRE</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="eng-card" onclick="toggleEngCard(this)">
+      <div class="eng-card-inner">
+        <div class="eng-card-front">
+          <img src="assets/engineering5.jpg" alt="Control & Automation" class="eng-card-img">
+          <div class="eng-card-front-content">
+            <span class="eng-icon">📟</span>
+            <h3>Control & Automation</h3>
+            <p>PLC diagnostics, sensor logic routing, and console upgrades.</p>
+            <span class="tap-hint">TAP TO FLIP</span>
+          </div>
+        </div>
+        <div class="eng-card-back">
+          <h4>Control & Automation</h4>
+          <ul>
+            <li>PLC ladder code reviews</li>
+            <li>Sensor routing calibrations</li>
+            <li>Telemetry wiring checks</li>
+            <li>Alarm console validation</li>
+          </ul>
+          <button class="gold-btn btn-sm" onclick="event.stopPropagation(); openOrderForm('Control & Automation')">ENQUIRE</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="eng-card" onclick="toggleEngCard(this)">
+      <div class="eng-card-inner">
+        <div class="eng-card-front">
+          <img src="assets/engineering1.jpg" alt="Technical Consultancy" class="eng-card-img">
+          <div class="eng-card-front-content">
+            <span class="eng-icon">🛠️</span>
+            <h3>Technical Consultancy</h3>
+            <p>Safety audits, layout planning, and failure diagnostics.</p>
+            <span class="tap-hint">TAP TO FLIP</span>
+          </div>
+        </div>
+        <div class="eng-card-back">
+          <h4>Technical Consultancy</h4>
+          <ul>
+            <li>Short circuit load studies</li>
+            <li>Risk hazard modeling</li>
+            <li>Standard compliance audits</li>
+            <li>Root-cause diagnostics</li>
+          </ul>
+          <button class="gold-btn btn-sm" onclick="event.stopPropagation(); openOrderForm('Technical Consultancy')">ENQUIRE</button>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Enquiry Popup -->
+  <div id="orderPopup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closeOrderForm()">&times;</span>
+      <h2>Engineering Enquiry</h2>
+      <form action="https://formsubmit.co/oikporstephen1@gmail.com" method="POST" class="estimate-form">
+        <input type="hidden" name="_subject" value="JJN HUB Engineering Enquiry">
+        <input type="hidden" name="_captcha" value="false">
+        <input name="Vehicle" id="selectedVehicle" readonly style="border-color: var(--neon); color: var(--neon); font-weight: bold; background: rgba(0,0,0,0.2);">
+        <input name="Name" placeholder="Full Name" required>
+        <input name="Phone" placeholder="Phone Number">
+        <input name="Email" placeholder="Email Address">
+        <textarea name="Message" placeholder="Additional details about your plant or requirements..."></textarea>
+        <button type="submit" class="gold-btn">Submit Enquiry</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <img src="assets/logo.png" alt="JJN HUB Logo" class="footer-logo-img">
+      <p class="footer-tagline">Engineering Mobility. Delivering Global Solutions.</p>
+    </div>
+    <div class="footer-nav">
+      <a href="index.html">Home</a> <span>|</span>
+      <a href="about.html">About</a> <span>|</span>
+      <a href="automotive.html">Automotive</a> <span>|</span>
+      <a href="gallery.html">Gallery</a> <span>|</span>
+      <a href="cost-estimation.html">Cost Estimate</a> <span>|</span>
+      <a href="car-search.html">Car Search</a> <span>|</span>
+      <a href="auto-help.html">Auto Help</a> <span>|</span>
+      <a href="engineering.html">Engineering</a> <span>|</span>
+      <a href="marine-services.html">Marine</a> <span>|</span>
+      <a href="logistics.html">Logistics</a> <span>|</span>
+      <a href="procurement.html">Procurement</a> <span>|</span>
+      <a href="contact.html">Contact</a>
+      <div class="footer-bottom">&copy; 2026 JJN HUB. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

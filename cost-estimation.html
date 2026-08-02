@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cost Estimation | JJN HUB</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="automotive cost-page theme-automotive">
+  <!-- Interactive Star-Particle Background Canvas -->
+  <canvas id="bg-canvas" class="bg-canvas"></canvas>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/logo.png" alt="JJN HUB Logo" class="logo-img">
+      </a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()" type="button">☰</button>
+    <nav id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="automotive.html">Automotive</a>
+      <a href="engineering.html">Engineering</a>
+      <a href="logistics.html">Logistics</a>
+      <a href="marine-services.html">Marine</a>
+      <a href="procurement.html">Procurement</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <p class="hero-services">VEHICLE • SHIPPING • CLEARING • DELIVERY</p>
+      <h1>COST ESTIMATION</h1>
+      <p class="hero-text">
+        Receive an itemized cost estimate covering vehicle purchase, shipping, clearing, insurance, and doorstep delivery.
+      </p>
+      <div class="auto-buttons">
+        <a href="gallery.html" class="gold-btn">Gallery</a>
+        <a href="cost-estimation.html" class="gold-btn active-btn">Cost Estimation</a>
+        <a href="car-search.html" class="gold-btn">Car Search</a>
+        <a href="auto-help.html" class="gold-btn">Auto Help</a>
+        <button class="gold-btn" onclick="openOrderForm()">Order Enquiry</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section reveal-on-scroll">
+    <div class="stat-box">
+      <h2>Global</h2>
+      <p>Vehicle Sourcing</p>
+    </div>
+    <div class="stat-box">
+      <h2>Fast</h2>
+      <p>Shipping Support</p>
+    </div>
+    <div class="stat-box">
+      <h2>35%</h2>
+      <p>Standard Duty</p>
+    </div>
+    <div class="stat-box">
+      <h2>Direct</h2>
+      <p>Escrow Clearing</p>
+    </div>
+  </section>
+
+  <!-- Estimator & Info Box split layout -->
+  <section class="estimate-section reveal-on-scroll">
+    <div class="estimate-card">
+      <h2>Request Cost Estimate</h2>
+      <form class="estimate-form" action="https://formsubmit.co/oikporstephen1@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="JJN HUB Cost Estimation Request">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="Vehicle Make" placeholder="Vehicle Make" required>
+        <input type="text" name="Vehicle Model" placeholder="Vehicle Model" required>
+        <input type="number" name="Year" placeholder="Vehicle Year">
+        <input type="text" name="Country" placeholder="Country of Purchase (e.g. USA, Japan)">
+        <input type="text" name="Destination Port" placeholder="Destination Port (e.g. Tin Can, Apapa)">
+        <input type="text" name="Budget" placeholder="Estimated Budget">
+        <textarea name="Details" placeholder="Additional Details (Color preference, auction lot...)"></textarea>
+        <button type="submit" class="gold-btn">Request Estimate</button>
+      </form>
+    </div>
+    
+    <div class="estimate-card">
+      <h2>What Your Estimate Includes</h2>
+      <div class="info-box">
+        <h3>Vehicle Cost</h3>
+        <p>Purchase price from supplier, dealer, or auction.</p>
+      </div>
+      <div class="info-box">
+        <h3>Shipping & Insurance</h3>
+        <p>Ocean freight handling, container space, and marine insurance.</p>
+      </div>
+      <div class="info-box">
+        <h3>Clearing Charges</h3>
+        <p>Official customs duties, terminal handling fees, and agency clearing releases.</p>
+      </div>
+      <div class="info-box">
+        <h3>Final Delivery</h3>
+        <p>Logistics transit from port terminal to final destination.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order Enquiry Popup -->
+  <div id="orderPopup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closeOrderForm()">&times;</span>
+      <h2>Vehicle Order Enquiry</h2>
+      <form action="https://formsubmit.co/oikporstephen1@gmail.com" method="POST" class="estimate-form">
+        <input type="hidden" name="_subject" value="JJN HUB Vehicle Order Request">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="Name" placeholder="Full Name" required>
+        <input type="email" name="Email" placeholder="Email Address" required>
+        <input type="tel" name="Phone" placeholder="Phone Number">
+        <input type="text" name="Vehicle" placeholder="Vehicle Make / Model">
+        <input type="text" name="Budget" placeholder="Budget Range">
+        <input type="text" name="Destination" placeholder="Destination Country">
+        <textarea name="Details" placeholder="Vehicle requirements"></textarea>
+        <button type="submit" class="gold-btn">Submit Enquiry</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <img src="assets/logo.png" alt="JJN HUB Logo" class="footer-logo-img">
+      <p class="footer-tagline">Engineering Mobility. Delivering Global Solutions.</p>
+    </div>
+    <div class="footer-nav">
+      <a href="index.html">Home</a> <span>|</span>
+      <a href="about.html">About</a> <span>|</span>
+      <a href="automotive.html">Automotive</a> <span>|</span>
+      <a href="gallery.html">Gallery</a> <span>|</span>
+      <a href="cost-estimation.html">Cost Estimate</a> <span>|</span>
+      <a href="car-search.html">Car Search</a> <span>|</span>
+      <a href="auto-help.html">Auto Help</a> <span>|</span>
+      <a href="engineering.html">Engineering</a> <span>|</span>
+      <a href="marine-services.html">Marine</a> <span>|</span>
+      <a href="logistics.html">Logistics</a> <span>|</span>
+      <a href="procurement.html">Procurement</a> <span>|</span>
+      <a href="contact.html">Contact</a>
+      <div class="footer-bottom">&copy; 2026 JJN HUB. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

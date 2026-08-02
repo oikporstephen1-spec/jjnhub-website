@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Procurement Division | JJN HUB</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="procurement theme-procurement">
+  <!-- Interactive Star-Particle Background Canvas -->
+  <canvas id="bg-canvas" class="bg-canvas"></canvas>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/logo.png" alt="JJN HUB Logo" class="logo-img">
+      </a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()" type="button">☰</button>
+    <nav id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="automotive.html">Automotive</a>
+      <a href="engineering.html">Engineering</a>
+      <a href="logistics.html">Logistics</a>
+      <a href="marine-services.html">Marine</a>
+      <a href="procurement.html">Procurement</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <p class="hero-services">GLOBAL SOURCING • HEAVY EQUIPMENT • MARINE PARTS • SPARES</p>
+      <h1>PROCUREMENT SOLUTIONS</h1>
+      <p class="hero-text">
+        Interactive 3D Supply Sourcing Carousel. Click on a side card or swipe using the arrows below to explore our procurement options.
+      </p>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section reveal-on-scroll">
+    <div class="stat-box">
+      <h2>10+</h2>
+      <p>Global Port Networks</p>
+    </div>
+    <div class="stat-box">
+      <h2>500+</h2>
+      <p>Items Delivered</p>
+    </div>
+    <div class="stat-box">
+      <h2>100%</h2>
+      <p>Quality Inspections</p>
+    </div>
+    <div class="stat-box">
+      <h2>Fast</h2>
+      <p>Customs Clearance</p>
+    </div>
+  </section>
+
+  <!-- 3D Perspective Swiper Carousel -->
+  <section class="carousel-container reveal-on-scroll">
+    <div class="carousel-stage">
+      
+      <!-- Card 1 -->
+      <div class="procure-card card-state-center">
+        <img src="assets/procurement1.jpg" alt="Industrial Materials" class="procure-card-img">
+        <div class="procure-card-content">
+          <h3>Industrial Materials</h3>
+          <p>Supply of high-strength structural items, piping accessories, and machinery parts.</p>
+          <ul>
+            <li>Carbon & stainless steel valves</li>
+            <li>High-pressure hydraulic hoses</li>
+            <li>Industrial welding accessories</li>
+            <li>Heavy structural steel plates</li>
+          </ul>
+          <button class="gold-btn btn-sm" onclick="event.stopPropagation(); openOrderForm('Industrial Materials')" type="button">Request RFQ</button>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="procure-card card-state-right">
+        <img src="assets/procurement2.jpg" alt="Marine Supplies" class="procure-card-img">
+        <div class="procure-card-content">
+          <h3>Marine Supplies</h3>
+          <p>Technical ship deck stores, engine hardware components, and safety equipment.</p>
+          <ul>
+            <li>Rigging ropes & towing lines</li>
+            <li>Offshore anchor chain locks</li>
+            <li>SOLAS liferafts & lifejackets</li>
+            <li>Cathodic protection zinc anodes</li>
+          </ul>
+          <button class="gold-btn btn-sm" onclick="event.stopPropagation(); openOrderForm('Marine Supplies')" type="button">Request RFQ</button>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="procure-card card-state-far-right">
+        <img src="assets/procurement3.jpg" alt="Automotive Spares" class="procure-card-img">
+        <div class="procure-card-content">
+          <h3>Automotive Spares</h3>
+          <p>Heavy machinery gaskets, filters, electrical fittings, and replacement spares.</p>
+          <ul>
+            <li>Diesel engines & generator valves</li>
+            <li>High-flow industrial air filters</li>
+            <li>Hydraulic pumps & gear boxes</li>
+            <li>Heavy truck suspension mounts</li>
+          </ul>
+          <button class="gold-btn btn-sm" onclick="event.stopPropagation(); openOrderForm('Automotive Spares')" type="button">Request RFQ</button>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="procure-card card-state-left">
+        <img src="assets/procurement1.jpg" alt="Strategic Sourcing" class="procure-card-img">
+        <div class="procure-card-content">
+          <h3>Strategic Sourcing</h3>
+          <p>Specialized equipment identification, vendor vetting, and logistics delivery.</p>
+          <ul>
+            <li>Global vendor network sourcing</li>
+            <li>Consolidated shipping coordination</li>
+            <li>Technical specification checks</li>
+            <li>Pre-shipment quality audits</li>
+          </ul>
+          <button class="gold-btn btn-sm" onclick="event.stopPropagation(); openOrderForm('Strategic Sourcing')" type="button">Request RFQ</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Carousel Controls -->
+    <div class="carousel-controls">
+      <button class="carousel-btn" id="carousel-prev" title="Previous Slide" type="button">◀</button>
+      <div class="carousel-dots">
+        <span class="carousel-dot active"></span>
+        <span class="carousel-dot"></span>
+        <span class="carousel-dot"></span>
+        <span class="carousel-dot"></span>
+      </div>
+      <button class="carousel-btn" id="carousel-next" title="Next Slide" type="button">▶</button>
+    </div>
+  </section>
+
+  <!-- RFQ Popup Modal -->
+  <div id="orderPopup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closeOrderForm()">&times;</span>
+      <h2>Procurement Enquiry (RFQ)</h2>
+      <form action="https://formsubmit.co/oikporstephen1@gmail.com" method="POST" class="estimate-form">
+        <input type="hidden" name="_subject" value="JJN HUB Sourcing RFQ Request">
+        <input type="hidden" name="_captcha" value="false">
+        <input name="Vehicle" id="selectedVehicle" readonly style="border-color: var(--neon); color: var(--neon); font-weight: bold; background: rgba(0,0,0,0.2);">
+        <input name="Name" placeholder="Full Name / Company Name" required>
+        <input name="Phone" placeholder="Phone Number">
+        <input name="Email" placeholder="Email Address">
+        <textarea name="Message" placeholder="Specify item descriptions, sizes, quantities, and other RFQ details..."></textarea>
+        <button type="submit" class="gold-btn">Submit RFQ Request</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <img src="assets/logo.png" alt="JJN HUB Logo" class="footer-logo-img">
+      <p class="footer-tagline">Engineering Mobility. Delivering Global Solutions.</p>
+    </div>
+    <div class="footer-nav">
+      <a href="index.html">Home</a> <span>|</span>
+      <a href="about.html">About</a> <span>|</span>
+      <a href="automotive.html">Automotive</a> <span>|</span>
+      <a href="gallery.html">Gallery</a> <span>|</span>
+      <a href="cost-estimation.html">Cost Estimate</a> <span>|</span>
+      <a href="car-search.html">Car Search</a> <span>|</span>
+      <a href="auto-help.html">Auto Help</a> <span>|</span>
+      <a href="engineering.html">Engineering</a> <span>|</span>
+      <a href="marine-services.html">Marine</a> <span>|</span>
+      <a href="logistics.html">Logistics</a> <span>|</span>
+      <a href="procurement.html">Procurement</a> <span>|</span>
+      <a href="contact.html">Contact</a>
+      <div class="footer-bottom">&copy; 2026 JJN HUB. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/2348071769373" class="whatsapp-chat" target="_blank">
+    <img src="assets/whatsapp.png" alt="WhatsApp">
+  </a>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Logistics Division | JJN HUB</title>
+  <meta name="description" content="Explore JJN Logistics solutions. Tracking parcel status, coordinating international container shipping, customs forwarding, or local rider registration and business subscriptions.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="logistics theme-logistics">
+  <!-- Interactive Star-Particle Background Canvas -->
+  <canvas id="bg-canvas" class="bg-canvas"></canvas>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/logo.png" alt="JJN HUB Logo" class="logo-img">
+      </a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()" type="button">☰</button>
+    <nav id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="automotive.html">Automotive</a>
+      <a href="engineering.html">Engineering</a>
+      <a href="logistics.html" class="active">Logistics</a>
+      <a href="marine-services.html">Marine</a>
+      <a href="procurement.html">Procurement</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <p class="hero-services">FREIGHT • SHIPPING • CONTAINER CLEARING • LOCAL DISPATCH</p>
+      <h1>LOGISTICS SOLUTIONS</h1>
+      <p class="hero-text">
+        Coordinating express international freight forwarding, port customs clearances, local dispatch subscriptions, and tracking solutions to keep supply chains fluid.
+      </p>
+    </div>
+  </section>
+
+  <!-- Live Shipment Tracking Console -->
+  <section class="reveal-on-scroll" style="padding: 0 6%;">
+    <div class="tracking-terminal" id="tracking-console-wrapper">
+      <h2>Cargo & Parcel Tracker</h2>
+      <p>Enter your consignment tracking code below to fetch active transit steps and estimated arrivals.</p>
+      <div class="tracker-input-group">
+        <input type="text" class="tracker-input" id="shipmentTrackId" placeholder="e.g. JJN-TRACK-LOCAL or JJN-TRACK-GLOBAL" aria-label="Tracking ID">
+        <button class="tracker-btn" id="trackShipmentBtn" type="button">Track Shipment</button>
+      </div>
+
+      <!-- Tracking Results Panel (Shown Dynamically) -->
+      <div class="tracker-results" id="trackingResults">
+        <div class="tracking-details-summary">
+          <div class="summary-item" id="resType"><strong>Type</strong> -</div>
+          <div class="summary-item" id="resRoute"><strong>Route</strong> -</div>
+          <div class="summary-item" id="resEta"><strong>Estimated Arrival</strong> -</div>
+          <div class="summary-item" id="resStatus"><strong>Current Status</strong> -</div>
+          <div class="summary-item" id="resCourier"><strong>Courier/Vessel</strong> -</div>
+          <div class="summary-item" id="resLocation"><strong>Last Location</strong> -</div>
+        </div>
+
+        <!-- Step Progress Bar -->
+        <div class="tracker-steps">
+          <div class="tracker-progress-line"></div>
+          
+          <div class="step-node">
+            <div class="step-bullet">1</div>
+            <div class="step-label">Booked</div>
+          </div>
+          <div class="step-node">
+            <div class="step-bullet">2</div>
+            <div class="step-label">In Transit</div>
+          </div>
+          <div class="step-node">
+            <div class="step-bullet">3</div>
+            <div class="step-label">Out for Delivery</div>
+          </div>
+          <div class="step-node">
+            <div class="step-bullet">4</div>
+            <div class="step-label">Delivered</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Mode Toggle Selector -->
+  <section class="reveal-on-scroll" style="padding: 20px 6% 0;">
+    <div class="logistics-mode-selector">
+      <button class="mode-toggle-btn active-mode" data-mode="international" type="button">International Logistics</button>
+      <button class="mode-toggle-btn" data-mode="local" type="button">Local Logistics</button>
+    </div>
+  </section>
+
+  <!-- CONTENT SECTION 1: INTERNATIONAL LOGISTICS -->
+  <div class="logistics-mode-content active-content" id="logistics-international">
+    <section class="logistics-panel reveal-on-scroll">
+      <div class="logistics-menu">
+        <button class="logistics-btn active-logistics" onclick="showLogistics('freight', this)">Freight Coordination</button>
+        <button class="logistics-btn" onclick="showLogistics('shipping', this)">Shipping Assistance</button>
+        <button class="logistics-btn" onclick="showLogistics('importexport', this)">Import/Export Logistics</button>
+        <button class="logistics-btn" onclick="showLogistics('procurement', this)">Procurement Logistics</button>
+        <button class="logistics-btn" onclick="showLogistics('tracking', this)">Delivery Management</button>
+        <button class="logistics-btn" onclick="showLogistics('project', this)">Project Cargo Logistics</button>
+      </div>
+      
+      <div class="logistics-image">
+        <img id="logisticsImage" src="assets/logistics1.jpg" alt="Logistics Services">
+      </div>
+      
+      <div class="logistics-content">
+        <div id="freight" class="logistics-description active-logistics-content">
+          <h2>Freight Coordination</h2>
+          <p>Planning space allocations, cargo manifests, and container routing across major ocean lanes.</p>
+        </div>
+        <div id="shipping" class="logistics-description">
+          <h2>Shipping Assistance</h2>
+          <p>Booking cargo slots, preparing bills of lading, coordinating port releases, and sorting manifest anomalies.</p>
+        </div>
+        <div id="importexport" class="logistics-description">
+          <h2>Import/Export Logistics</h2>
+          <p>Customs declaration updates, duty valuations, compliance auditing, and secure terminal storage management.</p>
+        </div>
+        <div id="procurement" class="logistics-description">
+          <h2>Procurement Logistics</h2>
+          <p>Managing raw material runs from international manufacturer nodes directly to client warehouses.</p>
+        </div>
+        <div id="tracking" class="logistics-description">
+          <h2>Delivery Management</h2>
+          <p>Real-time vehicle fleet tracking, terminal container release checks, and final site deliveries.</p>
+        </div>
+        <div id="project" class="logistics-description">
+          <h2>Project Cargo Logistics</h2>
+          <p>Specialized transport arrangements for oversized machinery, heavy plant equipment, and hazard runs.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- CONTENT SECTION 2: LOCAL LOGISTICS (Riders + Subscriptions) -->
+  <div class="logistics-mode-content" id="logistics-local">
+    <section class="local-logistics-grid reveal-on-scroll">
+      
+      <!-- Rider Onboarding Form Portal -->
+      <div class="portal-card">
+        <h3>Rider <span>Onboarding</span></h3>
+        <p>Register as a dispatch partner. Complete the form to join our local delivery fleet.</p>
+        <form class="portal-form" id="riderRegistrationForm">
+          <div class="form-group">
+            <label for="riderName">Full Name</label>
+            <input type="text" class="form-control" id="riderName" required placeholder="e.g. John Doe">
+          </div>
+          <div class="form-group">
+            <label for="riderPhone">Phone Number</label>
+            <input type="tel" class="form-control" id="riderPhone" required placeholder="e.g. +234 800 000 0000">
+          </div>
+          <div class="form-group">
+            <label for="riderVehicle">Vehicle Type</label>
+            <select class="form-control" id="riderVehicle" required>
+              <option value="Motorcycle">Motorcycle (Fast Dispatch)</option>
+              <option value="Bicycle">Bicycle (Eco delivery)</option>
+              <option value="Delivery Van">Delivery Van</option>
+              <option value="Light Truck">Light Truck</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="riderLicense">Driver / Rider License Number</label>
+            <input type="text" class="form-control" id="riderLicense" required placeholder="e.g. DL-9839-A">
+          </div>
+          <div class="form-group">
+            <label for="riderCity">Operational Area / City</label>
+            <input type="text" class="form-control" id="riderCity" required placeholder="e.g. Warri, Delta State">
+          </div>
+          <button type="submit" class="submit-btn">SUBMIT ONBOARDING REQUEST</button>
+        </form>
+      </div>
+
+      <!-- Business Subscription Form Portal -->
+      <div class="portal-card">
+        <h3>Corporate <span>Subscription</span></h3>
+        <p>Subscribe to our local dispatch rates. Integrate your warehouse routing with our riders.</p>
+        <form class="portal-form" id="companySubscriptionForm">
+          <div class="form-group">
+            <label for="compName">Company Name</label>
+            <input type="text" class="form-control" id="compName" required placeholder="e.g. Acme Spares Ltd">
+          </div>
+          <div class="form-group">
+            <label for="compContact">Contact Representative</label>
+            <input type="text" class="form-control" id="compContact" required placeholder="e.g. Sarah Ose">
+          </div>
+          <div class="form-group">
+            <label for="compPhone">Contact Phone</label>
+            <input type="tel" class="form-control" id="compPhone" required placeholder="e.g. +234 807 176 9373">
+          </div>
+          <div class="form-group">
+            <label for="compVolume">Estimated Monthly Dispatches</label>
+            <select class="form-control" id="compVolume" required>
+              <option value="1-50">1 - 50 dispatches / month</option>
+              <option value="51-200">51 - 200 dispatches / month</option>
+              <option value="201-500">201 - 500 dispatches / month</option>
+              <option value="500+">More than 500 dispatches / month</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="compPlan">Select Routing Plan</label>
+            <select class="form-control" id="compPlan" required>
+              <option value="Basic">Basic Dispatch ($99/mo base)</option>
+              <option value="Pro">Pro Dedicated ($249/mo base)</option>
+              <option value="Enterprise">Enterprise Multi-Fleet ($599/mo base)</option>
+            </select>
+          </div>
+          <button type="submit" class="submit-btn">ACTIVATE ROUTING PLAN</button>
+        </form>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- Form Success Feedback Modals -->
+  <div class="form-feedback-modal" id="riderFeedbackModal">
+    <div class="feedback-content">
+      <div class="feedback-icon">✓</div>
+      <h4>Registration Successful</h4>
+      <p id="riderModalText">Your request has been submitted successfully.</p>
+      <button class="close-feedback-btn" type="button">CLOSE WINDOW</button>
+    </div>
+  </div>
+
+  <div class="form-feedback-modal" id="companyFeedbackModal">
+    <div class="feedback-content">
+      <div class="feedback-icon">✓</div>
+      <h4>Subscription Activated</h4>
+      <p id="compModalText">Your company has subscribed to our local logistics tier.</p>
+      <button class="close-feedback-btn" type="button">CLOSE WINDOW</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <img src="assets/logo.png" alt="JJN HUB Logo" class="footer-logo-img">
+      <p class="footer-tagline">Engineering Mobility. Delivering Global Solutions.</p>
+    </div>
+    <div class="footer-nav">
+      <a href="index.html">Home</a> <span>|</span>
+      <a href="about.html">About</a> <span>|</span>
+      <a href="automotive.html">Automotive</a> <span>|</span>
+      <a href="gallery.html">Gallery</a> <span>|</span>
+      <a href="cost-estimation.html">Cost Estimate</a> <span>|</span>
+      <a href="car-search.html">Car Search</a> <span>|</span>
+      <a href="auto-help.html">Auto Help</a> <span>|</span>
+      <a href="engineering.html">Engineering</a> <span>|</span>
+      <a href="marine-services.html">Marine</a> <span>|</span>
+      <a href="logistics.html" class="active">Logistics</a> <span>|</span>
+      <a href="procurement.html">Procurement</a> <span>|</span>
+      <a href="contact.html">Contact</a>
+      <div class="footer-bottom">&copy; 2026 JJN HUB. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Widget -->
+  <a href="https://wa.me/2348071769373" class="whatsapp-chat" target="_blank">
+    <img src="assets/whatsapp.png" alt="WhatsApp">
+  </a>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

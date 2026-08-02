@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact JJN HUB | Corporate Support Terminal</title>
+  <meta name="description" content="Get in touch with Jesse & Jeslyn Nigeria Limited (JJN HUB). Send a message directly to our engineering, automotive, logistics, or procurement divisions in Warri, Delta State.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="contact">
+  <!-- Interactive Star-Particle Background Canvas -->
+  <canvas id="bg-canvas" class="bg-canvas"></canvas>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/logo.png" alt="JJN HUB Logo" class="logo-img">
+      </a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()" type="button">☰</button>
+    <nav id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="automotive.html">Automotive</a>
+      <a href="engineering.html">Engineering</a>
+      <a href="logistics.html">Logistics</a>
+      <a href="marine-services.html">Marine</a>
+      <a href="procurement.html">Procurement</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <p class="hero-services">OPERATIONAL SUPPORT • BUSINESS ENQUIRIES</p>
+      <h1>CONTACT JJN HUB</h1>
+      <p class="hero-text">
+        Have a project, sourcing query, or need field repairs? Send us a message, and our technical dispatch team will reply shortly.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Contact Console Section -->
+  <main class="contact-grid-container">
+    
+    <!-- Left Column: Corporate Information Console -->
+    <section class="contact-info-panel reveal-on-scroll">
+      
+      <!-- Live Status Badge -->
+      <div class="status-pill-container">
+        <div class="status-pill">
+          <span class="pulsing-dot"></span>
+          <span>Technical Dispatch: Online</span>
+        </div>
+      </div>
+
+      <!-- Contact Details Card -->
+      <div class="contact-glass-card">
+        <h2>Get In <span>Touch</span></h2>
+        
+        <!-- Phone Link -->
+        <a href="tel:+2348071769373" class="contact-interactive-item">
+          <div class="contact-item-icon">📞</div>
+          <div class="contact-item-details">
+            <h3>Direct Hotline</h3>
+            <p>+234 807 176 9373</p>
+          </div>
+        </a>
+
+        <!-- WhatsApp Link -->
+        <a href="https://wa.me/2348071769373" target="_blank" class="contact-interactive-item">
+          <div class="contact-item-icon">💬</div>
+          <div class="contact-item-details">
+            <h3>Live Chat Support</h3>
+            <p>Start a WhatsApp conversation</p>
+          </div>
+        </a>
+
+        <!-- Email Link -->
+        <a href="mailto:oikporstephen1@gmail.com" class="contact-interactive-item">
+          <div class="contact-item-icon">✉️</div>
+          <div class="contact-item-details">
+            <h3>Email Desk</h3>
+            <p>oikporstephen1@gmail.com</p>
+          </div>
+        </a>
+
+        <!-- Business details -->
+        <div style="margin-top: 25px; padding-top: 15px; border-top: 1px solid var(--panel-border);">
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;">
+            <strong>Jesse & Jeslyn Nigeria Limited</strong><br>
+            Corporate HQ: Warri, Delta State, Nigeria.<br>
+            Operations: Industrial, Maritime, Vehicle Dealership & Procurement Logistics.
+          </p>
+        </div>
+      </div>
+
+      <!-- Operating Hours Card -->
+      <div class="contact-glass-card">
+        <h2>Operating <span>Hours</span></h2>
+        <table class="operating-hours-table">
+          <tr>
+            <td class="day-label">Monday - Friday</td>
+            <td class="hours-label">08:00 - 17:00</td>
+          </tr>
+          <tr>
+            <td class="day-label">Saturday</td>
+            <td class="hours-label">09:00 - 14:00</td>
+          </tr>
+          <tr class="weekend">
+            <td class="day-label">Sunday</td>
+            <td class="hours-label">By Appointment</td>
+          </tr>
+        </table>
+      </div>
+
+    </section>
+
+    <!-- Right Column: Premium Contact Form -->
+    <section class="contact-form-panel reveal-on-scroll">
+      <div class="contact-glass-card" style="height: 100%;">
+        <h2>Send Us A <span>Message</span></h2>
+        <form class="portal-form" action="https://formsubmit.co/oikporstephen1@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="JJN HUB Contact Request">
+          <input type="hidden" name="_captcha" value="false">
+          
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" class="contact-form-control" id="fullName" name="Full Name" placeholder="e.g. Stephen Oikpor" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="companyName">Company Name</label>
+            <input type="text" class="contact-form-control" id="companyName" name="Company Name" placeholder="e.g. Acme Corp (Optional)">
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" class="contact-form-control" id="phone" name="Phone Number" placeholder="e.g. +234 807 176 9373" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" class="contact-form-control" id="email" name="Email Address" placeholder="e.g. support@jjnhub.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject / Department</label>
+            <select class="contact-form-control" id="subject" name="Subject" required>
+              <option value="General Support">General Support</option>
+              <option value="Automotive Enquiry">Automotive Sales & Search</option>
+              <option value="Engineering & Marine">Engineering & Marine Services</option>
+              <option value="Procurement & Logistics">Procurement & Logistics</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message Details</label>
+            <textarea class="contact-form-control" id="message" name="Message" rows="5" placeholder="Tell us about your project, vehicle specifications, or spare parts requirements..." required></textarea>
+          </div>
+
+          <button type="submit" class="submit-contact-btn">DISPATCH MESSAGE</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Interactive Map Section -->
+  <section class="map-section-container reveal-on-scroll">
+    <div class="map-wrapper">
+      <iframe 
+        class="map-iframe" 
+        src="https://maps.google.com/maps?q=Warri,%20Delta%20State,%20Nigeria&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+        allowfullscreen="" 
+        loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <img src="assets/logo.png" alt="JJN HUB Logo" class="footer-logo-img">
+      <p class="footer-tagline">Engineering Mobility. Delivering Global Solutions.</p>
+    </div>
+    <div class="footer-nav">
+      <a href="index.html">Home</a> <span>|</span>
+      <a href="about.html">About</a> <span>|</span>
+      <a href="automotive.html">Automotive</a> <span>|</span>
+      <a href="gallery.html">Gallery</a> <span>|</span>
+      <a href="cost-estimation.html">Cost Estimate</a> <span>|</span>
+      <a href="car-search.html">Car Search</a> <span>|</span>
+      <a href="auto-help.html">Auto Help</a> <span>|</span>
+      <a href="engineering.html">Engineering</a> <span>|</span>
+      <a href="marine-services.html">Marine</a> <span>|</span>
+      <a href="logistics.html">Logistics</a> <span>|</span>
+      <a href="procurement.html">Procurement</a> <span>|</span>
+      <a href="contact.html" class="active">Contact</a>
+      <div class="footer-bottom">&copy; 2026 JJN HUB. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Chat -->
+  <a href="https://wa.me/2348071769373" class="whatsapp-chat" target="_blank">
+    <img src="assets/whatsapp.png" alt="WhatsApp">
+  </a>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

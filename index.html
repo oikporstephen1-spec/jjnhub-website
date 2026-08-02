@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JJN HUB | Engineering Mobility. Delivering Global Solutions.</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="index">
+  <!-- Interactive Star-Particle Background Canvas -->
+  <canvas id="bg-canvas" class="bg-canvas"></canvas>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/logo.png" alt="JJN HUB Logo" class="logo-img">
+      </a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()" type="button">☰</button>
+    <nav id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="automotive.html">Automotive</a>
+      <a href="engineering.html">Engineering</a>
+      <a href="marine-services.html">Marine</a>
+      <a href="logistics.html">Logistics</a>
+      <a href="procurement.html">Procurement</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <p class="hero-services">AUTOMOTIVE • ENGINEERING • MARINE • LOGISTICS • PROCUREMENT</p>
+      <h1>JESSE & JESLYN <span>NIGERIA LIMITED</span> <span class="hub-name">JJN HUB</span></h1>
+      <p class="hero-text">
+        Integrated engineering, automotive, logistics, marine, and procurement services structured for modern industries. We deliver mobility, precision, and global supply chains.
+      </p>
+      <div class="hero-buttons">
+        <a href="about.html" class="gold-btn">ABOUT JJN HUB</a>
+        <a href="contact.html" class="outline-btn">CONTACT US</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section reveal-on-scroll">
+    <div class="stat-box">
+      <h2>10+</h2>
+      <p>Combined Experience</p>
+    </div>
+    <div class="stat-box">
+      <h2>5</h2>
+      <p>Business Divisions</p>
+    </div>
+    <div class="stat-box">
+      <h2>Global</h2>
+      <p>Sourcing Network</p>
+    </div>
+    <div class="stat-box">
+      <h2>24/7</h2>
+      <p>Operational Support</p>
+    </div>
+  </section>
+
+  <!-- Interactive Morph Console Section (Total Upgrade of service grid) -->
+  <section class="reveal-on-scroll" style="padding: 20px 6%;">
+    <div id="morphing-container" class="morphing-console theme-automotive">
+      <div class="console-header">
+        <div class="console-title">
+          <span class="console-dot"></span>
+          <h2>Division Console</h2>
+        </div>
+        <div class="console-tabs">
+          <button class="morph-tab-btn active" onclick="morphIndexTab('automotive', this)">Automotive</button>
+          <button class="morph-tab-btn" onclick="morphIndexTab('engineering', this)">Engineering</button>
+          <button class="morph-tab-btn" onclick="morphIndexTab('marine', this)">Marine</button>
+          <button class="morph-tab-btn" onclick="morphIndexTab('logistics', this)">Logistics</button>
+          <button class="morph-tab-btn" onclick="morphIndexTab('procurement', this)">Procurement</button>
+        </div>
+      </div>
+      
+      <div class="console-panels-wrapper">
+        <!-- Automotive Panel -->
+        <div id="console-automotive" class="console-panel active">
+          <div class="panel-info">
+            <h3>Sourcing & Importation</h3>
+            <p>Direct vehicle acquisition, shipping, clearing, and dealership logistics backed by localized customs support.</p>
+            <a href="automotive.html" class="gold-btn">LAUNCH AUTOMOTIVE</a>
+          </div>
+          <div class="panel-metrics">
+            <div class="metric-card">
+              <div class="metric-num">500+</div>
+              <div class="metric-txt">Vehicles Cleared</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-num">100%</div>
+              <div class="metric-txt">Customs Assured</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Engineering Panel -->
+        <div id="console-engineering" class="console-panel">
+          <div class="panel-info">
+            <h3>Industrial Engineering</h3>
+            <p>Electrical layouts, motor controls, safety calibrations, and plant maintenance operations.</p>
+            <a href="engineering.html" class="gold-btn">LAUNCH ENGINEERING</a>
+          </div>
+          <div class="panel-metrics">
+            <div class="metric-card">
+              <div class="metric-num">120+</div>
+              <div class="metric-txt">Plants Tuned</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-num">24/7</div>
+              <div class="metric-txt">Technical SLA</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Marine Panel -->
+        <div id="console-marine" class="console-panel">
+          <div class="panel-info">
+            <h3>Vessel Infrastructure</h3>
+            <p>Testing power distribution systems, switchboard installations, navigation calibration, and emergency maritime fixes.</p>
+            <a href="marine-services.html" class="gold-btn">LAUNCH MARINE</a>
+          </div>
+          <div class="panel-metrics">
+            <div class="metric-card">
+              <div class="metric-num">45+</div>
+              <div class="metric-txt">Vessels Maintained</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-num">ClassA</div>
+              <div class="metric-txt">Compliance</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Logistics Panel -->
+        <div id="console-logistics" class="console-panel">
+          <div class="panel-info">
+            <h3>Express Freight Chains</h3>
+            <p>Multimodal global freight shipping, port handling coordination, and domestic delivery logistics.</p>
+            <a href="logistics.html" class="gold-btn">LAUNCH LOGISTICS</a>
+          </div>
+          <div class="panel-metrics">
+            <div class="metric-card">
+              <div class="metric-num">15+</div>
+              <div class="metric-txt">Partner Ports</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-num">Fast</div>
+              <div class="metric-txt">Transit SLA</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Procurement Panel -->
+        <div id="console-procurement" class="console-panel">
+          <div class="panel-info">
+            <h3>Strategic Sourcing</h3>
+            <p>Industrial hardware supplies, corporate logistics support, and global manufacturer direct relationships.</p>
+            <a href="procurement.html" class="gold-btn">LAUNCH PROCUREMENT</a>
+          </div>
+          <div class="panel-metrics">
+            <div class="metric-card">
+              <div class="metric-num">1,000+</div>
+              <div class="metric-txt">Items Procured</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-num">Zero</div>
+              <div class="metric-txt">Supply Failures</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose JJN HUB Section -->
+  <section class="why-section reveal-on-scroll">
+    <div class="section-title">
+      <h2>WHY CHOOSE JJN HUB</h2>
+      <p>Dependable services designed to support business growth and operational efficiency.</p>
+    </div>
+    <div class="cards">
+      <div class="card tilt-card">
+        <h2>Reliable Solutions</h2>
+        <p>Operational frameworks tailored to guarantee project completions and decrease downtime.</p>
+      </div>
+      <div class="card tilt-card">
+        <h2>Technical Expertise</h2>
+        <p>Engineering and maritime specialists operating under strict safety standards.</p>
+      </div>
+      <div class="card tilt-card">
+        <h2>Global Logistics</h2>
+        <p>Strategic channels connecting international manufacturer networks directly with clients.</p>
+      </div>
+      <div class="card tilt-card">
+        <h2>Dedicated SLAs</h2>
+        <p>Rapid response teams offering round-the-clock remote and on-site support.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA Section -->
+  <section class="hero reveal-on-scroll">
+    <div class="hero-overlay">
+      <h1>READY TO WORK WITH JJN HUB?</h1>
+      <p class="hero-text">Our specialists are ready to orchestrate your vehicle, engineering, and supply requirements.</p>
+      <div class="hero-buttons">
+        <a href="contact.html" class="gold-btn">CONTACT US</a>
+        <a href="https://wa.me/2348071769373" target="_blank" class="outline-btn">WHATSAPP US</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <img src="assets/logo.png" alt="JJN HUB Logo" class="footer-logo-img">
+      <p class="footer-tagline">Engineering Mobility. Delivering Global Solutions.</p>
+    </div>
+    <div class="footer-nav">
+      <a href="index.html">Home</a> <span>|</span>
+      <a href="about.html">About</a> <span>|</span>
+      <a href="automotive.html">Automotive</a> <span>|</span>
+      <a href="gallery.html">Gallery</a> <span>|</span>
+      <a href="cost-estimation.html">Cost Estimate</a> <span>|</span>
+      <a href="car-search.html">Car Search</a> <span>|</span>
+      <a href="auto-help.html">Auto Help</a> <span>|</span>
+      <a href="engineering.html">Engineering</a> <span>|</span>
+      <a href="marine-services.html">Marine</a> <span>|</span>
+      <a href="logistics.html">Logistics</a> <span>|</span>
+      <a href="procurement.html">Procurement</a> <span>|</span>
+      <a href="contact.html">Contact</a>
+      <div class="footer-bottom">&copy; 2026 JJN HUB. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/2348071769373" class="whatsapp-chat" target="_blank">
+    <img src="assets/whatsapp.png" alt="WhatsApp">
+  </a>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

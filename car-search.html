@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Car Search | JJN HUB</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="automotive theme-automotive">
+  <!-- Interactive Star-Particle Background Canvas -->
+  <canvas id="bg-canvas" class="bg-canvas"></canvas>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/logo.png" alt="JJN HUB Logo" class="logo-img">
+      </a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()" type="button">☰</button>
+    <nav id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="automotive.html">Automotive</a>
+      <a href="engineering.html">Engineering</a>
+      <a href="logistics.html">Logistics</a>
+      <a href="marine-services.html">Marine</a>
+      <a href="procurement.html">Procurement</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <p class="hero-services">SPECIFICATION • MATCHING • GLOBAL AUCTION SOURCING</p>
+      <h1>CAR SEARCH</h1>
+      <p class="hero-text">
+        Specify your desired make, model, year, and budget. Our teams will source matching lots directly from partner dealership pipelines.
+      </p>
+      <div class="auto-buttons">
+        <a href="gallery.html" class="gold-btn">Gallery</a>
+        <a href="cost-estimation.html" class="gold-btn">Cost Estimation</a>
+        <a href="car-search.html" class="gold-btn active-btn">Car Search</a>
+        <a href="auto-help.html" class="gold-btn">Auto Help</a>
+        <button class="gold-btn" onclick="openOrderForm()">Order Enquiry</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section reveal-on-scroll">
+    <div class="stat-box">
+      <h2>Global</h2>
+      <p>Sourcing Grid</p>
+    </div>
+    <div class="stat-box">
+      <h2>Fast</h2>
+      <p>Bidding Turnaround</p>
+    </div>
+    <div class="stat-box">
+      <h2>Verified</h2>
+      <p>Lot Inspections</p>
+    </div>
+    <div class="stat-box">
+      <h2>Full</h2>
+      <p>Port Release SLAs</p>
+    </div>
+  </section>
+
+  <!-- Form and Info Columns Split -->
+  <section class="estimate-section reveal-on-scroll">
+    <div class="estimate-card">
+      <h2>Vehicle Search Request</h2>
+      <form class="estimate-form" action="https://formsubmit.co/oikporstephen1@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="JJN HUB Vehicle Search Request">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="Full Name" placeholder="Full Name" required>
+        <input type="tel" name="Phone Number" placeholder="Phone Number" required>
+        <input type="email" name="Email Address" placeholder="Email Address">
+        <input type="text" name="Vehicle Make" placeholder="Vehicle Make" required>
+        <input type="text" name="Vehicle Model" placeholder="Vehicle Model" required>
+        <input type="number" name="Vehicle Year" placeholder="Vehicle Year">
+        <input type="text" name="Budget" placeholder="Budget Limit">
+        <input type="text" name="Country of Purchase" placeholder="Preferred Purchase Country">
+        <select name="Transmission">
+          <option value="">Transmission</option>
+          <option>Automatic</option>
+          <option>Manual</option>
+        </select>
+        <select name="Fuel Type">
+          <option value="">Fuel Type</option>
+          <option>Petrol</option>
+          <option>Diesel</option>
+          <option>Hybrid</option>
+          <option>Electric</option>
+        </select>
+        <textarea name="Additional Requirements" placeholder="Additional requirements (Exterior trim, options, package details...)"></textarea>
+        <button type="submit" class="gold-btn">SEARCH VEHICLE</button>
+      </form>
+    </div>
+    
+    <div class="estimate-card">
+      <h2>Search Support</h2>
+      <div class="info-box">
+        <h3>Vehicle Sourcing</h3>
+        <p>Targeted search filters across major international auctions and registered importer lots.</p>
+      </div>
+      <div class="info-box">
+        <h3>Import Guidance</h3>
+        <p>Logistical clearance, clearing agent assignments, and custom release verifications.</p>
+      </div>
+      <div class="info-box">
+        <h3>Budget Matching</h3>
+        <p>Adjusting bidding margins to find optimal options that fall within cost ranges.</p>
+      </div>
+      <div class="info-box">
+        <h3>Customer Support</h3>
+        <p>Continuous progress reports throughout sourcing, loading, and transit phases.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order Enquiry Popup -->
+  <div id="orderPopup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closeOrderForm()">&times;</span>
+      <h2>Vehicle Order Enquiry</h2>
+      <form action="https://formsubmit.co/oikporstephen1@gmail.com" method="POST" class="estimate-form">
+        <input type="hidden" name="_subject" value="JJN HUB Vehicle Order Request">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="Name" placeholder="Full Name" required>
+        <input type="email" name="Email" placeholder="Email Address" required>
+        <input type="tel" name="Phone" placeholder="Phone Number">
+        <input type="text" name="Vehicle" placeholder="Vehicle Make / Model">
+        <input type="text" name="Budget" placeholder="Budget Range">
+        <input type="text" name="Destination" placeholder="Destination Country">
+        <textarea name="Details" placeholder="Vehicle requirements"></textarea>
+        <button type="submit" class="gold-btn">Submit Enquiry</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <img src="assets/logo.png" alt="JJN HUB Logo" class="footer-logo-img">
+      <p class="footer-tagline">Engineering Mobility. Delivering Global Solutions.</p>
+    </div>
+    <div class="footer-nav">
+      <a href="index.html">Home</a> <span>|</span>
+      <a href="about.html">About</a> <span>|</span>
+      <a href="automotive.html">Automotive</a> <span>|</span>
+      <a href="gallery.html">Gallery</a> <span>|</span>
+      <a href="cost-estimation.html">Cost Estimate</a> <span>|</span>
+      <a href="car-search.html">Car Search</a> <span>|</span>
+      <a href="auto-help.html">Auto Help</a> <span>|</span>
+      <a href="engineering.html">Engineering</a> <span>|</span>
+      <a href="marine-services.html">Marine</a> <span>|</span>
+      <a href="logistics.html">Logistics</a> <span>|</span>
+      <a href="procurement.html">Procurement</a> <span>|</span>
+      <a href="contact.html">Contact</a>
+      <div class="footer-bottom">&copy; 2026 JJN HUB. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

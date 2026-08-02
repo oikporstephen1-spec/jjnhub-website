@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vehicle Gallery | JJN HUB</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="automotive gallery-page theme-automotive">
+  <!-- Interactive Star-Particle Background Canvas -->
+  <canvas id="bg-canvas" class="bg-canvas"></canvas>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/logo.png" alt="JJN HUB Logo" class="logo-img">
+      </a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()" type="button">☰</button>
+    <nav id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="automotive.html">Automotive</a>
+      <a href="engineering.html">Engineering</a>
+      <a href="logistics.html">Logistics</a>
+      <a href="marine-services.html">Marine</a>
+      <a href="procurement.html">Procurement</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <p class="hero-services">AVAILABLE STOCK • SOURCED DEALERSHIP OPTIONS</p>
+      <h1>VEHICLE GALLERY</h1>
+      <p class="hero-text">
+        View a selection of recently imported and available vehicles. Click an image to enlarge it, or launch an enquiry directly.
+      </p>
+      <div class="auto-buttons">
+        <a href="gallery.html" class="gold-btn active-btn">Gallery</a>
+        <a href="cost-estimation.html" class="gold-btn">Cost Estimation</a>
+        <a href="car-search.html" class="gold-btn">Car Search</a>
+        <a href="auto-help.html" class="gold-btn">Auto Help</a>
+        <button class="gold-btn" onclick="openOrderForm()">Order Enquiry</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Grid -->
+  <section class="gallery-grid reveal-on-scroll" style="max-width: 1200px; margin: 0 auto; padding: 60px 24px;">
+    <div class="car-card tilt-card">
+      <img src="assets/car1.jpg" alt="2020 Lexus RX350" class="vehicle-img" onclick="openImage(this)">
+      <h3>2020 Lexus RX350</h3>
+      <p class="price">₦42,000,000</p>
+      <button class="gold-btn" onclick="openOrderForm('2020 Lexus RX350')">BUY NOW</button>
+    </div>
+    <div class="car-card tilt-card">
+      <img src="assets/car2.jpg" alt="2019 Toyota Prado" class="vehicle-img" onclick="openImage(this)">
+      <h3>2019 Toyota Prado</h3>
+      <p class="price">₦58,000,000</p>
+      <button class="gold-btn" onclick="openOrderForm('2019 Toyota Prado')">BUY NOW</button>
+    </div>
+    <div class="car-card tilt-card">
+      <img src="assets/car3.jpg" alt="2021 Mercedes GLE" class="vehicle-img" onclick="openImage(this)">
+      <h3>2021 Mercedes GLE</h3>
+      <p class="price">₦73,000,000</p>
+      <button class="gold-btn" onclick="openOrderForm('2021 Mercedes GLE')">BUY NOW</button>
+    </div>
+  </section>
+
+  <!-- Large Zoom Preview Overlay -->
+  <div id="imagePopup" class="image-popup" onclick="closeImage()">
+    <span class="close" onclick="closeImage()">&times;</span>
+    <img id="popupImage" class="popup-large" alt="Zoomed View">
+  </div>
+
+  <!-- Buy Order Enquiry Popup -->
+  <div id="orderPopup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closeOrderForm()">&times;</span>
+      <h2>Vehicle Enquiry</h2>
+      <form action="https://formsubmit.co/oikporstephen1@gmail.com" method="POST" class="estimate-form">
+        <input type="hidden" name="_subject" value="JJN HUB Vehicle Enquiry">
+        <input type="hidden" name="_captcha" value="false">
+        <input name="Vehicle" id="selectedVehicle" readonly style="border-color: var(--neon); color: var(--neon); font-weight: bold; background: rgba(0,0,0,0.2);">
+        <input name="Name" placeholder="Full Name" required>
+        <input name="Phone" placeholder="Phone Number">
+        <input name="Email" placeholder="Email Address">
+        <textarea name="Message" placeholder="Additional Requests (Options, trim level...)"></textarea>
+        <button type="submit" class="gold-btn">Submit Enquiry</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <img src="assets/logo.png" alt="JJN HUB Logo" class="footer-logo-img">
+      <p class="footer-tagline">Engineering Mobility. Delivering Global Solutions.</p>
+    </div>
+    <div class="footer-nav">
+      <a href="index.html">Home</a> <span>|</span>
+      <a href="about.html">About</a> <span>|</span>
+      <a href="automotive.html">Automotive</a> <span>|</span>
+      <a href="gallery.html">Gallery</a> <span>|</span>
+      <a href="cost-estimation.html">Cost Estimate</a> <span>|</span>
+      <a href="car-search.html">Car Search</a> <span>|</span>
+      <a href="auto-help.html">Auto Help</a> <span>|</span>
+      <a href="engineering.html">Engineering</a> <span>|</span>
+      <a href="marine-services.html">Marine</a> <span>|</span>
+      <a href="logistics.html">Logistics</a> <span>|</span>
+      <a href="procurement.html">Procurement</a> <span>|</span>
+      <a href="contact.html">Contact</a>
+      <div class="footer-bottom">&copy; 2026 JJN HUB. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

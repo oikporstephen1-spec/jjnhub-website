@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marine Services | JJN HUB</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="marine-services theme-marine">
+  <!-- Interactive Star-Particle Background Canvas -->
+  <canvas id="bg-canvas" class="bg-canvas"></canvas>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/logo.png" alt="JJN HUB Logo" class="logo-img">
+      </a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()" type="button">☰</button>
+    <nav id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="automotive.html">Automotive</a>
+      <a href="engineering.html">Engineering</a>
+      <a href="logistics.html">Logistics</a>
+      <a href="marine-services.html">Marine</a>
+      <a href="procurement.html">Procurement</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <p class="hero-services">ELECTRICAL • SWITCHBOARD • NAVIGATION • COMMUNICATIONS</p>
+      <h1>MARINE SOLUTIONS</h1>
+      <p class="hero-text">
+        Interactive ship diagnostic bridge console. Click any pulsing radar hotspot on the vessel blueprint to load system parameters.
+      </p>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section reveal-on-scroll">
+    <div class="stat-box">
+      <h2>24/7</h2>
+      <p>Offshore Dispatch</p>
+    </div>
+    <div class="stat-box">
+      <h2>Marine</h2>
+      <p>Class Certification</p>
+    </div>
+    <div class="stat-box">
+      <h2>Reliable</h2>
+      <p>Vessel Diagnostics</p>
+    </div>
+    <div class="stat-box">
+      <h2>Global</h2>
+      <p>Safety Compliant</p>
+    </div>
+  </section>
+
+  <!-- Vessel Systems Blueprint Grid -->
+  <section class="marine-dashboard-grid reveal-on-scroll">
+    
+    <!-- Left Column: Vessel Console Schematic -->
+    <div class="vessel-console">
+      <svg viewBox="0 0 600 200" class="vessel-svg">
+        <!-- Hull Base -->
+        <path d="M 50,140 L 450,140 L 520,110 L 550,110 L 560,95 L 480,95 L 480,75 L 460,75 L 460,95 L 180,95 L 150,95 L 150,110 L 70,110 L 50,140 Z" fill="none" stroke="var(--neon)" stroke-width="1.5" opacity="0.85"></path>
+        <!-- Cabin Superstructure Aft -->
+        <path d="M 380,95 L 380,50 L 440,50 L 440,95 M 395,50 L 395,30 L 415,30 L 415,50 M 405,30 L 405,15" fill="none" stroke="var(--neon)" stroke-width="1.5" opacity="0.85"></path>
+        <!-- Cargo Stacks Front -->
+        <rect x="180" y="65" width="80" height="30" fill="none" stroke="var(--neon)" stroke-dasharray="2" opacity="0.5"></rect>
+        <rect x="270" y="65" width="80" height="30" fill="none" stroke="var(--neon)" stroke-dasharray="2" opacity="0.5"></rect>
+        <!-- Keel water lines -->
+        <line x1="20" y1="148" x2="580" y2="148" stroke="var(--neon)" stroke-width="1" stroke-dasharray="10 5" opacity="0.3"></line>
+        <line x1="10" y1="154" x2="590" y2="154" stroke="var(--neon)" stroke-width="0.5" stroke-dasharray="4 8" opacity="0.2"></line>
+      </svg>
+      
+      <!-- Pulsing Radar Hotspots -->
+      <button class="radar-hotspot active" id="hotspot-bridge" onclick="activateMarineHotspot('bridge', this)" title="Bridge Systems" type="button"></button>
+      <button class="radar-hotspot" id="hotspot-engine" onclick="activateMarineHotspot('engine', this)" title="Engine Room Grid" type="button"></button>
+      <button class="radar-hotspot" id="hotspot-auxiliary" onclick="activateMarineHotspot('auxiliary', this)" title="Auxiliary Control Panel" type="button"></button>
+      <button class="radar-hotspot" id="hotspot-hull" onclick="activateMarineHotspot('hull', this)" title="Keel Drydock Phase" type="button"></button>
+    </div>
+
+    <!-- Right Column: Diagnostic CRT Terminal -->
+    <div class="diagnostic-terminal">
+      <div class="terminal-header">
+        <span>UNIT LOG: SEA-CONSOLE-99</span>
+        <div class="terminal-indicator">
+          <span class="indicator-dot"></span>
+          <span>ONLINE</span>
+        </div>
+      </div>
+      
+      <div class="terminal-content">
+        <h3 id="term-title">Bridge System Console</h3>
+        <div class="terminal-meta">
+          <span>CODE: <strong id="term-code">SYS-NAV-01</strong></span>
+          <span>STATE: <strong id="term-status" class="status-active">ACTIVE SLA</strong></span>
+        </div>
+        <p id="term-desc">Navigation, GPS radar calibration, and HF/VHF communication arrays installation.</p>
+        <ul id="term-list">
+          <li>GMDSS Radio diagnostics & safety surveys</li>
+          <li>Gyrocompass & autopilot interface checks</li>
+          <li>Electronic Chart Display (ECDIS) audits</li>
+          <li>Satellite VSAT terminal alignments</li>
+        </ul>
+      </div>
+      
+      <div class="terminal-action">
+        <button class="gold-btn btn-sm" id="term-action-btn" onclick="openOrderForm('Bridge Navigation & Communications')" type="button">ENQUIRE</button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Consultation Enquiry Popup -->
+  <div id="orderPopup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closeOrderForm()">&times;</span>
+      <h2>Marine Enquiry</h2>
+      <form action="https://formsubmit.co/oikporstephen1@gmail.com" method="POST" class="estimate-form">
+        <input type="hidden" name="_subject" value="JJN HUB Marine Enquiry">
+        <input type="hidden" name="_captcha" value="false">
+        <input name="Vehicle" id="selectedVehicle" readonly style="border-color: var(--neon); color: var(--neon); font-weight: bold; background: rgba(0,0,0,0.2);">
+        <input name="Name" placeholder="Full Name" required>
+        <input name="Phone" placeholder="Phone Number">
+        <input name="Email" placeholder="Email Address">
+        <textarea name="Message" placeholder="Additional details about your vessel or requirements..."></textarea>
+        <button type="submit" class="gold-btn">Submit Enquiry</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <img src="assets/logo.png" alt="JJN HUB Logo" class="footer-logo-img">
+      <p class="footer-tagline">Engineering Mobility. Delivering Global Solutions.</p>
+    </div>
+    <div class="footer-nav">
+      <a href="index.html">Home</a> <span>|</span>
+      <a href="about.html">About</a> <span>|</span>
+      <a href="automotive.html">Automotive</a> <span>|</span>
+      <a href="gallery.html">Gallery</a> <span>|</span>
+      <a href="cost-estimation.html">Cost Estimate</a> <span>|</span>
+      <a href="car-search.html">Car Search</a> <span>|</span>
+      <a href="auto-help.html">Auto Help</a> <span>|</span>
+      <a href="engineering.html">Engineering</a> <span>|</span>
+      <a href="marine-services.html">Marine</a> <span>|</span>
+      <a href="logistics.html">Logistics</a> <span>|</span>
+      <a href="procurement.html">Procurement</a> <span>|</span>
+      <a href="contact.html">Contact</a>
+      <div class="footer-bottom">&copy; 2026 JJN HUB. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/2348071769373" class="whatsapp-chat" target="_blank">
+    <img src="assets/whatsapp.png" alt="WhatsApp">
+  </a>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
