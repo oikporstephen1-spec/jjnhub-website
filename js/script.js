@@ -1006,12 +1006,27 @@ function initLogisticsFeatures() {
 }
 
 function toggleDropdown(e) {
-  if (window.innerWidth <= 900) {
-    e.preventDefault();
-    const dropdown = e.currentTarget.closest('.nav-item-dropdown');
-    dropdown.classList.toggle('open');
-  }
+  e.preventDefault();
+  e.stopPropagation();
+  const dropdown = e.currentTarget.closest('.nav-item-dropdown');
+  
+  // Close any other open dropdowns
+  document.querySelectorAll('.nav-item-dropdown').forEach(d => {
+    if (d !== dropdown) d.classList.remove('open');
+  });
+
+  dropdown.classList.toggle('open');
 }
+
+// Close dropdown when clicking anywhere outside
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.nav-item-dropdown')) {
+    document.querySelectorAll('.nav-item-dropdown').forEach(d => {
+      d.classList.remove('open');
+    });
+  }
+});
+
 
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initializeApp);
