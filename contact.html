@@ -21,13 +21,18 @@
     <button class="menu-toggle" onclick="toggleMenu()" type="button">☰</button>
     <nav id="mobileMenu">
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="automotive.html">Automotive</a>
-      <a href="engineering.html">Engineering</a>
-      <a href="logistics.html">Logistics</a>
-      <a href="marine-services.html">Marine</a>
-      <a href="procurement.html">Procurement</a>
-      <a href="contact.html" class="active">Contact</a>
+      <div class="nav-item-dropdown">
+        <a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">Services <span class="dropdown-arrow">▾</span></a>
+        <div class="dropdown-menu">
+          <a href="automotive.html">Automotive and Dealership Services</a>
+          <a href="logistics.html">Logistics Services</a>
+          <a href="engineering.html">Engineering Services</a>
+          <a href="marine-services.html">Marine Services</a>
+          <a href="procurement.html">Procurement Services</a>
+        </div>
+      </div>
+      <a href="about.html">About Us</a>
+      <a href="contact.html" class="active">Contact Us</a>
     </nav>
   </header>
 

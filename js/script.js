@@ -1005,10 +1005,19 @@ function initLogisticsFeatures() {
   }
 }
 
+function toggleDropdown(e) {
+  if (window.innerWidth <= 900) {
+    e.preventDefault();
+    const dropdown = e.currentTarget.closest('.nav-item-dropdown');
+    dropdown.classList.toggle('open');
+  }
+}
+
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initializeApp);
 } else {
   initializeApp();
 }
+
 
 
